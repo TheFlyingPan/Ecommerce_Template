@@ -1,0 +1,43 @@
+{% extends 'base.html.twig' %}
+
+
+{% block body %}
+
+    <h1>Je crée mon article</h1>
+    {{ form_start(formProduit) }}
+
+    <div class="form-group">
+        <label for="">Nom du produit</label>
+        {{ form_widget(formProduit.name) }}
+    </div>
+
+    <div class="form-group">
+        <label for="">Description</label>
+        {{ form_widget(formProduit.description) }}
+    </div>
+
+    <div class="form-group">
+        <label for="">Prix</label>
+        {{ form_widget(formProduit.price) }}
+    </div>
+
+    <div class="form-group">
+        <label for="">Photo</label>
+        {{ form_widget(formProduit.photo) }}
+    </div>
+
+    <div class="form-group">
+        <label for="">Instock</label>
+        {{ form_widget(formProduit.instock) }}
+    </div>
+    
+    <div class="form-group">
+        <label for="">Catégorie</label>
+        {{ form_widget(formProduit.category) }}
+    </div>
+
+    <button type="submit" class="btn btn-success">Ajouter le produit</button>
+
+    {{ form_end(formProduit) }}
+
+{% endblock %}
